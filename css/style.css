@@ -1,0 +1,343 @@
+/* 기본 설정 */
+	* { margin:0;  padding:0;}
+	ol,ul { list-style: none; }
+	a { outline:0; text-decoration:none; color:#555; }
+	img { border:0;}
+	body {font-family: 'Noto Sans KR', sans-serif;}
+
+
+/*레이아웃*/
+	header { 
+		position:fixed; width:15%; height:100%; background:#fff; 
+		top:0px; left:0px; transition:all 0.5s;
+		}
+	nav { 
+		position:relative; width:85%; height:35px; background:#1c5c58; 
+		margin-left:15%; transition:all 0.5s;
+		}
+	nav a {display:block; font-size:12px; color:white;}
+	nav i {font-size:15px; margin-left:8px;}
+	section { width:85%; position:relative; margin-left:15%;}
+	article { float:left; height:260px; transition:all 0.5s; animation:scale 1s 1;}
+	article:nth-child(1) { width:60%; height:520px;}
+	article:nth-child(2) { width:40%; background:white;}
+	article:nth-child(3) { width:20%; background:#1c5c58;}
+	article:nth-child(4) { width:20%; background:#aaa;}
+	article:nth-child(5) { width:20%; background:#999;}
+	article:nth-child(6) { width:40%; background:white;}
+	article:nth-child(7) { width:20%; background:#777;}
+	article:nth-child(8) { width:20%; background:black;}
+	article:nth-child(9) { width:40%; background:#555;}
+	article:nth-child(10) { width:20%;	background:#444;}
+	article:nth-child(11) { width:20%; background:black;}
+	article:nth-child(12) { width:20%;	background:#222;}
+
+	article>div { position:relative; width:100%; height:100%; overflow:hidden; cursor:pointer; }
+
+/* 새로고침 애니메이션 */
+	@keyframes scale {
+		0% {transform:scale(0);}
+		100% {transform:scale(1);}
+		}
+
+/* header 컨텐츠 */
+	header h1 {
+		width:180px; height:136px; 
+		background:url(../img/logo_big.png) no-repeat 0px 0px; 
+		background-size:contain; position:absolute; top:70px; left:50%; 
+		margin-left:-90px; text-indent:-99999px;
+		}
+	#gnb { 
+		position:absolute; top:300px; right:70px;
+		}
+	#gnb a { 
+		display:block; padding:8px 30px; font-size:17px; 
+		font-weight:bold; color:#555; text-align:left; line-height:1.8; 
+		transition:all .5s;
+		}
+	#gnb a:hover { color:#1c5c58; }
+	.privacy { 
+		width:150px; height:50px; position:absolute; 
+		bottom:45px; right:35%; margin-right:-45px;
+		}
+	.privacy li { float:left;}
+	.privacy li a { 
+		display:block; font-size:12px;
+		}
+	.privacy li span.call { 
+		font-size:16px; color:#555
+		}
+
+/* 네비게이션 */
+	nav a:nth-child(1) { position:absolute; top:7px; left:10px; }
+	nav a:nth-child(2) { position:absolute; top:7px; right:170px; }
+	nav a:nth-child(3) { position:absolute; top:7px; right:90px; }
+	nav a:nth-child(4) { position:absolute; top:7px; right:10px; }
+
+	article>div { position:relative; width:100%; height:100%; overflow:hidden; cursor:pointer; }
+
+/* 배경이미지 삽입*/
+	article .bg1 { background-image:url(../img/pic1.jpg);}
+	article .bg2 { background-image:url(../img/pic2.jpg);}
+	article .bg3 { background-image:url(../img/pic3.jpg);}
+	article .bg4 { background-image:url(../img/pic4.jpg);}
+	article .bg5 { background-image:url(../img/pic5.jpg);}
+	article .bg6 { background-image:url(../img/pic6.jpg);}
+	article .bg7 { background-image:url(../img/pic7.jpg);}
+
+/* 이미지박스 */
+	article .bg { background-size:contain; background-position:center center; }
+	article .bg span { 
+		font-size:50px; color:#fff;	position:absolute; bottom:0px; 
+		right:20px; transform:scale(10); opacity:0;	transition:all 0.6s;
+		}
+	article .bg1 span { 
+		font-size:20px; bottom:10px; right:30px; opacity:1; 
+		transform:scale(1); transition:all 0.5s; border:1px solid white;
+		padding:5px 10px 5px 10px;
+		}
+
+/* 글자박스 */
+	article a {font-size:30px;}
+
+/* 글자박스 메인 */
+	article.bg1 i {color:white;}
+
+/* 글자박스 2 섹션 분양현황 */
+	#date, #board {float:left;}
+	#date {width:50%; height:100%;}
+	span.month {display:block; font-size:50px; margin-left:34%; padding-top:20%;}
+	span.month_text {display:block; color:#555; font-size:20px; margin-left:34%; margin-top:-10%}
+	#board {border-left:2px dotted #777573; width:48%; height:100%;}
+	#board_list {margin-top:20px;}
+	#board li a {font-size:15px;}
+	#board li {margin-bottom:10px; margin-left:20px; margin-top:10px;}
+	span.now {
+		display:block; font-size:15px; background:#c0a958; color:white; width:80px; 
+		text-align:center; border:1px solid #1c0a958; border-radius:30px; 
+		}
+
+/* 글자박스 3 섹션 텍스트 '로얄스테이는 차원이다른 프리미엄으로 이야기합니다'*/
+	#talk {text-align:center;}
+	#talk a {color:white; font-size:18px; display:block; margin-top:100px;}
+
+/* 글자박스 8 섹션 상품안내 텍스트 */
+	#info {text-align:center; background:#c0a958;}
+	#info a {color:white; font-size:30px; display:block; margin-top:100px;}
+	#info:hover {opacity:0.5}
+
+/* 글자박스 11 섹션 브랜드 소개 텍스트 */
+	#brand {text-align:center; background:white;}
+	#brand a {color:black; font-size:30px; display:block; margin-top:100px;}
+	#brand:hover {opacity:0.7}
+
+/* 글자박스 6 섹션 서류접수 사전예약 */
+	#reservation {float:left; width:50%; height:100%;}
+	#reservation i {color:#1c5c58; font-size:100px; margin-top:10%; margin-bottom:7%}
+	#reservation a {display:block; text-align:center;}
+	#reservation a:hover i {color:#555; transition:all .5s;}
+	span.document {font-size:25px; color:black;}
+	#search {float:left; width:49%; height:100%; border-left:2px dotted gray}
+	#search i {color:#1c5c58; font-size:100px; margin-top:10%; margin-bottom:7%}
+	#search a {display:block; text-align:center;}
+	#search a:hover i {color:#555; transition:all .5s;}
+	span.money {font-size:25px; color:black;}
+	
+/* 이미지박스 호버효과*/
+	article:hover .bg span { opacity:1; transform:scale(1);}
+	article .bg1:hover span { transform:rotateY(360deg); color:#bbb8b5; }
+
+
+@media screen and (min-width:1280px) and (max-width:1599px) {  
+	
+	/*레이아웃*/
+		header { position:relative; width:100%; height:80px;}
+		nav { width:100%; margin-left:0%;}		
+		section { width:100%; margin-left:0px;}	
+		
+	/* header 컨텐츠 */
+		header h1 { 
+			width:400px; height:70px; background-image:url(../img/logo2.png); 
+			top:6px; left:20px; margin-left:0px;
+			}	
+		#gnb { top:20px; right:200px;}	
+		#gnb li { float:left;}
+		.privacy { bottom:0px; right:80px;}
+		.privacy li a {display:none;}
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px) {  
+	
+	/*레이아웃*/
+		header { position:relative; width:100%; height:80px;}
+		nav { width:100%; margin-left:0%;}		
+		section { width:100%; margin-left:0px;}		
+		article:nth-child(1) { width:75%;}	
+		article:nth-child(2) { width:25%;}	
+		article:nth-child(3) { width:25%;}	
+		article:nth-child(4) { width:25%;}	
+		article:nth-child(5) { width:25%;}	
+		article:nth-child(6) { width:50%;}	
+		article:nth-child(7) { width:50%;}	
+		article:nth-child(8) { width:25%;}	
+		article:nth-child(9) { width:25%;}	
+		article:nth-child(10) { width:50%;}	
+		article:nth-child(11) { width:25%;}	
+		article:nth-child(12) { width:25%;}
+		
+	/* header 컨텐츠 */
+		header h1 { 
+			width:400px; height:70px; background-image:url(../img/logo2.png); 
+			top:6px; left:20px; margin-left:0px;
+		}
+		#gnb {top:20px; right:30px;}	
+		#gnb li {float:left;}	
+		.privacy {display:none;}
+
+	/* 섹션 컨텐츠 */
+		#date {display:none;}
+		#board {border:none; width:100%; height:100%}
+}
+
+@media screen and (min-width:780px) and (max-width:1023px) {  
+	
+	/*레이아웃*/
+		header { position:relative; width:100%; height:80px;}
+		nav { width:100%; margin-left:0%;}		
+		section { width:100%; margin-left:0px;}		
+		article:nth-child(1) { width:100%;	height:400px;}	
+		article:nth-child(2) { width:66.6666%;}	
+		article:nth-child(3) { width:33.3333%;}	
+		article:nth-child(4) { width:33.3333%; display:none;}	
+		article:nth-child(5) { width:33.3333%;}	
+		article:nth-child(6) { width:66.6666%;}	
+		article:nth-child(7) { width:66.6666%; display:none;}	
+		article:nth-child(8) { width:33.3333%;}	
+		article:nth-child(9) { width:33.3333%;}	
+		article:nth-child(10) { width:66.6666%; display:none;}	
+		article:nth-child(11) { width:33.3333%;}	
+		article:nth-child(12) { width:33.3333%; display:none;}
+	
+	/* header 컨텐츠 */
+		header h1 {
+			width:400px; height:70px; 
+			background-image:url(../img/logo2.png); 
+			top:6px; left:20px; margin-left:0px;
+			}	
+		#gnb { top:20px; right:10px;}	
+		#gnb li { float:left;}	
+		#gnb a { padding:10px 10px;}		
+		.privacy { display:none;}	
+	
+	/* 섹션 컨텐츠 */
+		#reservation {border-top:1px solid gray;}
+		#brand {border-top:1px solid gray;}
+
+}
+@media screen and (min-width:640px) and (max-width:779px) {  
+	
+	/*레이아웃*/
+		header { position:relative; width:100%; height:80px;}
+		nav { width:100%; margin-left:0%;}		
+		section { width:100%; margin-left:0px;}		
+		article:nth-child(1) { width:100%;	height:400px;}
+		article:nth-child(2) { width:100%;}	
+		article:nth-child(3) { width:33.3333%; display:none;}	
+		article:nth-child(4) { width:100%;	display:none;}	
+		article:nth-child(5) { width:50%;}	
+		article:nth-child(6) { width:50%;}	
+		article:nth-child(7) { width:66.6666%; display:none;}	
+		article:nth-child(8) { width:50%;}	
+		article:nth-child(9) { width:50%;}	
+		article:nth-child(10) { width:66.6666%; display:none;}	
+		article:nth-child(11) { width:50%;}	
+		article:nth-child(12) { width:50%;}	
+	
+	/* header 컨텐츠 */
+		header h1 { 
+			width:380px; height:70px; 
+			background-image:url(../img/logo2.png); 
+			top:6px; left:0px; margin-left:0px;
+			}	
+		#gnb { top:20px; right:10px;}	
+		#gnb li { float:left;}	
+		#gnb a { padding:10px 10px;}	
+		.privacy { display:none;}	
+
+	/* 섹션 컨텐츠 */
+		.customer {border-top:1px solid gray;}
+		.customer i {padding-top:30px;}
+		span.document, span.money {display:block; font-size:17px; margin-top:20px;}
+		#info a,#brand a {font-size:40px;}
+	
+}
+@media screen and (min-width:480px) and (max-width:639px) {  
+	
+	/*레이아웃*/
+		header { position:relative; width:100%; height:130px;}	
+		nav { display:none;}
+		section { width:100%; margin-left:0px;}
+		article { height:150px;}		
+		article:nth-child(1) { width:100%; height:300px;}		
+		article:nth-child(2) { width:100%;}	
+		article:nth-child(3) { width:33.3333%; display:none;}	
+		article:nth-child(4) { width:100%;	display:none;}	
+		article:nth-child(5) { width:50%;}	
+		article:nth-child(6) { width:50%;}	
+		article:nth-child(7) { width:66.6666%; display:none;}	
+		article:nth-child(8) { width:50%;}	
+		article:nth-child(9) { width:50%;}	
+		article:nth-child(10) { width:66.6666%; display:none;}	
+		article:nth-child(11) { width:50%;}	
+		article:nth-child(12) { width:50%;}	
+	
+	/* header 컨텐츠 */
+		header h1 { 
+			width:400px; height:70px; 
+			background-image:url(../img/logo2.png); 
+			top:6px; left:33%; margin:0px auto;
+		}
+		#gnb { width:100%; height:40px; top:80px; right:0px;}	
+		#gnb li { float:left; width:25%;}
+		#gnb li.mobile_none {display:none;}
+		#gnb a { padding:4px; text-align:center;}	
+		.privacy { display:none;}	
+	
+	/* 섹션 컨텐츠 */
+		article .bg1 span {font-size:20px; bottom:20px;}
+		article.customer {border-top:2px dotted gray;}
+		#info a {display:block; margin-top:17%;}
+		#brand a {display:block; margin-top:17%;}
+		#reservation i {display:block; font-size:60px; margin-top:30px}
+		span.document,span.money {display:block; font-size:14px; margin-top:-40px;}
+		#search i {display:block; font-size:60px; margin-top:30px}
+		#date {margin-top:-30px;}
+		span.month_text {display:block; font-size:17px; padding-left:2%}
+		#board_list li a {font-size:12px; float:left; margin:3px}
+		#board_list li {margin-top:-10px}
+		span.now {width:60px; font-size:12px}
+	
+}
+@media screen and (max-width:479px){
+
+	/*레이아웃*/
+		header { position:fixed; width:100%; height:40px; background-color:transparent; z-index:5;}
+		nav { display:none;}	
+		section { width:100%; margin-left:0px; z-index:4;}		
+		article { display:none;}
+		article:nth-child(1) { display:block; position:fixed; width:100%; height:100%;}	
+	
+	/* header 컨텐츠 */
+		header h1 { top:20px; width:140px; margin-left:-70px;}	
+		#gnb { width:250px; top:140px; right:50%; margin-right:-125px;}	
+		#gnb a { 
+			width:100%; background:#000; box-sizing:border-box; 
+			margin:8px 0px; border-radius:10px; opacity:0.5; color:#fff;
+			display:block; text-align:center;
+		}	
+		#gnb a:hover { opacity:1; transform:scale(1.1);}
+		
+		article:nth-child(1) span { display:none;}
+}
+
+
